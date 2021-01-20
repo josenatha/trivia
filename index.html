@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia APP</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    
+    <div class="container mt-5">
+        <div>
+            <div class="form-group">
+                <label for="questions-number">Eige cuántas preguntas quieres</label>
+                <input type="number" min="1" max="50" onchange="getQuestions()" class="form-control" id="questions-number">
+              </div>      
+        </div>
+        <div id="category">
+        </div>
+        <div>
+            <div class="form-group">
+                <label for="questions-difficult">Eige el nivel de dificultad</label>
+                <select onchange="getQuestions()" class="form-control" id="questions-difficult">
+                    <option value="">Any Diffucult</option>
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+              </div>
+        </div>
+        <div>
+            <div class="form-group">
+                <label for="questions-type">Eige el tipo de respuesta</label>
+                <select onchange="getQuestions()" class="form-control" id="questions-type">
+                    <option value="multiple">Multiple Options</option>
+                    <option value="boolean">True/False</option>
+                </select>
+              </div>
+        </div>
+        <!-- Aquí van las tarjetas -->
+        <div>
+            <form id="container-cards" name="questions">
+            </form>
+        </div>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+</html>
